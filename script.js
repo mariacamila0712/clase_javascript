@@ -147,3 +147,73 @@ console.log(typeof "Hola"); //string
 console.log (typeof{alert}); //function **
 console.log ((null)); //object - ERROR DE JAVASCRIPT
 console.log ((Math)); //object
+
+//Interacciones: alert, prompt, confirm
+
+//alert
+//alert ('Hola Mundo');
+
+//prompt
+//let nombre_capturado = prompt('Digite el nombre', 'Hola');
+//alert (nombre_capturado);
+
+//prompt('Digite el nombre');
+//prompt('Digite el nombre','')//solo para IE
+
+//Confirm
+let esHelado = confirm ('¿Te gusta el helado?');
+console.log(esHelado); //true si presionan Ok-Aceptar y false si presionan cancelar.
+
+//CONVERSION DE TIPOS
+
+//Existen dos tipos de conversaciones explicito e implicita
+
+//converitr a String
+
+let valor = true;
+console.log (typeof valor);
+
+valor = String(valor); //"true"
+valor = String (false); //"false"
+valor = String (null); //"null"
+valor = String (undefined); //undefined
+console.log (valor);
+console.log (typeof valor);
+
+//Convertir a Numero
+
+//Conversiones numericas ocurren automaticamente en funciones matematicas y expresiones.
+//alert ('6' / '2'); //3
+//alert (1+'2'); //12
+//alert ('1'+2); //12
+
+
+let cadena = "123"
+let num_cad = Number(cadena);//123
+console.log (Number('hola'));// NaN
+
+/*
+unfenined->NaN
+null->0
+true->1
+false->0
+string ''->0
+string 'hola' -> NaN
+*/
+
+//Convertir a Boleano
+
+console.log(Boolean ("hola"))
+
+/*
+unfenined-> false
+null-> false
+string ''-> false
+NaN-> 0
+0 -> false
+'0' -> true
+'  ' -> true
+*/
+
+console.log (Boolean(String(0)));
+console.log (Boolean(0));
