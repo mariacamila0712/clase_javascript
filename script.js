@@ -85,30 +85,30 @@ console.log(Infinity);
 
 //NaN representa un error de cálculo. Es el resultado de una operacion
 //matematica incorrecta o indefinida
-console.log ("No es numero" / 2);
+console.log("No es numero" / 2);
 
 //NaN es pegajoso. Cualquier operacion sobre Nan devuelve NaN.
 
-console.log ("No es numero" / 2 +5);
+console.log("No es numero" / 2 + 5);
 
 //Tipo de datos BigInt
 
 //Valores enteros mayores que (2^53-1) o menor que -(2^53-1)9.007.199.254.740.991
 let numero_grande = 1234567899012233445656124444324;
-console.log (numero_grande);
+console.log(numero_grande);
 
 //Tipo String
 let t = "a";
 let texto = "hola";
-let texto_dos = 'hola';
+let texto_dos = "hola";
 let texto_tres = ``; //backticks funcionalidad extendida
 let nomb = "Maria";
-console.log ("Hola", nomb);
-console.log ('Hola', nomb);
-console.log (`Hola`, nomb);
-console.log ("Hola ${nomb}");
-console.log ('Hola ${nomb}');
-console.log (`Hola ${nomb}`);
+console.log("Hola", nomb);
+console.log("Hola", nomb);
+console.log(`Hola`, nomb);
+console.log("Hola ${nomb}");
+console.log("Hola ${nomb}");
+console.log(`Hola ${nomb}`);
 
 //Tipo Booleano
 
@@ -116,7 +116,7 @@ console.log (`Hola ${nomb}`);
 let verdadero = true;
 let falso = false;
 
-let mayor  = 4 > 1; //True
+let mayor = 4 > 1; //True
 
 //Tipo de dato null
 
@@ -124,8 +124,7 @@ let mayor  = 4 > 1; //True
 //Forma un tipo propio separado que contien solo el valor null;
 
 let edad = null;
-console.log (edad);
-
+console.log(edad);
 
 //en JS null No significa un objeto no existente
 // Es solo un valor especial que representa nada, vacio o valor desconocido.
@@ -142,11 +141,11 @@ console.log(typeof undefined); //undefined
 console.log(typeof 0); //number
 console.log(typeof true); //boolean
 console.log(typeof 10n); //bigint
-console.log(typeof "Hola"); //string 
+console.log(typeof "Hola"); //string
 
-console.log (typeof{alert}); //function **
-console.log ((null)); //object - ERROR DE JAVASCRIPT
-console.log ((Math)); //object
+console.log(typeof { alert }); //function **
+console.log(null); //object - ERROR DE JAVASCRIPT
+console.log(Math); //object
 
 //Interacciones: alert, prompt, confirm
 
@@ -161,7 +160,7 @@ console.log ((Math)); //object
 //prompt('Digite el nombre','')//solo para IE
 
 //Confirm
-let esHelado = confirm ('¿Te gusta el helado?');
+let esHelado = confirm("¿Te gusta el helado?");
 console.log(esHelado); //true si presionan Ok-Aceptar y false si presionan cancelar.
 
 //CONVERSION DE TIPOS
@@ -171,14 +170,14 @@ console.log(esHelado); //true si presionan Ok-Aceptar y false si presionan cance
 //converitr a String
 
 let valor = true;
-console.log (typeof valor);
+console.log(typeof valor);
 
 valor = String(valor); //"true"
-valor = String (false); //"false"
-valor = String (null); //"null"
-valor = String (undefined); //undefined
-console.log (valor);
-console.log (typeof valor);
+valor = String(false); //"false"
+valor = String(null); //"null"
+valor = String(undefined); //undefined
+console.log(valor);
+console.log(typeof valor);
 
 //Convertir a Numero
 
@@ -187,10 +186,9 @@ console.log (typeof valor);
 //alert (1+'2'); //12
 //alert ('1'+2); //12
 
-
-let cadena = "123"
-let num_cad = Number(cadena);//123
-console.log (Number('hola'));// NaN
+let cadena = "123";
+let num_cad = Number(cadena); //123
+console.log(Number("hola")); // NaN
 
 /*
 unfenined->NaN
@@ -203,7 +201,7 @@ string 'hola' -> NaN
 
 //Convertir a Boleano
 
-console.log(Boolean ("hola"))
+console.log(Boolean("hola"));
 
 /*
 unfenined-> false
@@ -215,5 +213,103 @@ NaN-> 0
 '  ' -> true
 */
 
-console.log (Boolean(String(0)));
-console.log (Boolean(0));
+console.log(Boolean(String(0)));
+console.log(Boolean(0));
+
+//OPERADORES BASICOS
+//Operadores  unarios y binarios
+
+let res;
+a = 5;
+b = 2;
+
+res = a + b;
+res = a - b;
+res = a * b;
+res = a / b;
+res = a % b; //mod
+res = a ** b; //potencia
+
+//alert ('1' + 2); //12
+//alert (1 + '2'); //12
+
+//alert (2 + 2 + '1') //41
+//alert ('1' + 2 + 2) //122
+
+//alert(2 - '1'); //1
+//alert ('6' / '2'); //3
+//alert ('6' / '2a'); //
+
+//Operaciones Unaria
+
+a = 1;
+console.log (+a);
+
+a = -1;
+console.log (+a);
+
+console.log(+true);
+console.log(+false);
+console.log(+NaN);
+console.log(+undefined);
+console.log(+null);
+console.log(+"");
+
+a = "2";
+b = "3";
+console.log (+a + + b);
+console.log (Number(a) + Number(b));
+
+//Operaciones Unaria -
+
+a = 1;
+console.log (-a);
+
+a = -1;
+console.log (-a);
+
+console.log(-true);
+console.log(-false);
+
+//ASIGNACIONES
+a = 2 + 3;
+a = b = c = 2 + 3;
+
+c = 2 + 3;
+b = c;
+a = b;
+
+//c = 3 = (a = b + 1);
+
+//Modificadores
+a = a + 2; 
+a += 2;
+a = a - 2;
+a -= 2;
+
+//Incremento y Decremento
+
+//++ Incremento 
+// -- Decremento
+
+a = 2;
+a ++;
+console.log (a);//3
+
+a = 2;
+a --;
+console.log (a);//1
+
+//Posicion del incremento o decremento
+
+a = 1;
+b = ++a;
+console.log (b); //2
+
+a = 1;
+b = a++;
+c = a;
+console.log (b); //1
+console.log (c); //2
+
+
