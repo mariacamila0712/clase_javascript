@@ -245,10 +245,10 @@ res = a ** b; //potencia
 //Operaciones Unaria
 
 a = 1;
-console.log (+a);
+console.log(+a);
 
 a = -1;
-console.log (+a);
+console.log(+a);
 
 console.log(+true);
 console.log(+false);
@@ -259,16 +259,16 @@ console.log(+"");
 
 a = "2";
 b = "3";
-console.log (+a + + b);
-console.log (Number(a) + Number(b));
+console.log(+a + +b);
+console.log(Number(a) + Number(b));
 
 //Operaciones Unaria -
 
 a = 1;
-console.log (-a);
+console.log(-a);
 
 a = -1;
-console.log (-a);
+console.log(-a);
 
 console.log(-true);
 console.log(-false);
@@ -284,63 +284,59 @@ a = b;
 //c = 3 = (a = b + 1);
 
 //Modificadores
-a = a + 2; 
+a = a + 2;
 a += 2;
 a = a - 2;
 a -= 2;
 
 //Incremento y Decremento
 
-//++ Incremento 
+//++ Incremento
 // -- Decremento
 
 a = 2;
-a ++;
-console.log (a);//3
+a++;
+console.log(a); //3
 
 a = 2;
-a --;
-console.log (a);//1
+a--;
+console.log(a); //1
 
 //Posicion del incremento o decremento
 
 a = 1;
 b = ++a;
-console.log (b); //2
+console.log(b); //2
 
 a = 1;
 b = a++;
 c = a;
-console.log (b); //1
-console.log (c); //2
-
+console.log(b); //1
+console.log(c); //2
 
 //COMPARACIONES
-console.log (2 > 1); //true
-console.log (2 == 1); //false
-console.log (2 != 1); //true
+console.log(2 > 1); //true
+console.log(2 == 1); //false
+console.log(2 != 1); //true
 
 let resultado = 2 > 1;
 
-//COMPARACION ENTRE CADENAS 
-console.log ( 'Z' > 'A');//true
-console.log ('Show' > 'show'); //false
-console.log ('casa' > 'casas'); //false
-console.log ('a' > 'A'); //true
-console.log ('showexxx' > 'show'); //false
+//COMPARACION ENTRE CADENAS
+console.log("Z" > "A"); //true
+console.log("Show" > "show"); //false
+console.log("casa" > "casas"); //false
+console.log("a" > "A"); //true
+console.log("showexxx" > "show"); //false
 
-console.log  ( '****************');
-
+console.log("****************");
 
 a = 0;
-b = '0';
+b = "0";
 
 boleano_a = Boolean(a); //false
 boleano_b = Boolean(b); //true
 
-console.log ( a == b); //true --convierte '0' a 0 entero por ser de diferentes tipos.
-
-
+console.log(a == b); //true --convierte '0' a 0 entero por ser de diferentes tipos.
 
 //1.La letra minuscula es mayor que la mayuscula.
 //2. La palabra con mas letras despues de pasar la primera condicion es mayor que la menos letras.
@@ -349,63 +345,55 @@ console.log ( a == b); //true --convierte '0' a 0 entero por ser de diferentes t
 //Al comparar valores de diferentes tipos, JS convierte los valores a Numeros.
 //Toda comparacion con NaN es false.
 
+console.log("****************");
+console.log("2" > 1); //true
+console.log("01" == 1); //true
+console.log(true > 0); //true
+console.log(false == 0); //true
 
-console.log  ( '****************');
-console.log ('2' > 1); //true
-console.log ('01' == 1); //true
-console.log (true > 0); //true
-console.log (false == 0); //true
-
-console.log  ( '******** NaN ********');
+console.log("******** NaN ********");
 //NaN
-console.log ('hola' > 0); //false 'hola'=NaN
-console.log ('hola' < 0); //false
-console.log ('hola' == 0); //false
+console.log("hola" > 0); //false 'hola'=NaN
+console.log("hola" < 0); //false
+console.log("hola" == 0); //false
 
-
-console.log  ( '******** Undefined ********');
+console.log("******** Undefined ********");
 //Undefined
-console.log (undefined > 0); //false - porque todo comparadao con NaN es false
-console.log (undefined < 0); //false - porque todo comparadao con NaN es false
+console.log(undefined > 0); //false - porque todo comparadao con NaN es false
+console.log(undefined < 0); //false - porque todo comparadao con NaN es false
 
-
-
-console.log  ( '******** Null ********');
+console.log("******** Null ********");
 //Null
-console.log (null > 0); //false - porque todo comparadao con NaN es false
-console.log (null < 0); //false - porque todo comparadao con NaN es false
-console.log (null >= 0); //true
+console.log(null > 0); //false - porque todo comparadao con NaN es false
+console.log(null < 0); //false - porque todo comparadao con NaN es false
+console.log(null >= 0); //true
 
-
-console.log  ( '******** Null y Undefined == ********');
+console.log("******** Null y Undefined == ********");
 //El undefined y el null en las comparaciones de igualacion no estrictas
 //---- actuan diferente: son iguales entre si, pero no a ningun otro valor.
 
-console.log (null == undefined); //true 
-console.log (null == 5); //false
-console.log (undefined == 5)//false
+console.log(null == undefined); //true
+console.log(null == 5); //false
+console.log(undefined == 5); //false
 
-console.log  ( '******** No diferencia 0 de false == ********');
+console.log("******** No diferencia 0 de false == ********");
 
-console.log (0 == false); //true
-console.log ('' == false); //true-- al convertir '' es igual a 0 y false es igual a 0.
+console.log(0 == false); //true
+console.log("" == false); //true-- al convertir '' es igual a 0 y false es igual a 0.
 
-
-console.log  ( '******** Igualacion estricta ********');
+console.log("******** Igualacion estricta ********");
 //Igualacion estricta
-console.log ( 0 === false); //false
-console.log (null === undefined); //false
+console.log(0 === false); //false
+console.log(null === undefined); //false
 
-
-console.log  ( '******** Ejercicio ********');
-5 > 4 //true
-"apple" > "pineapple" //false
-"2" > "12" //true -undecode
-undefined == null //true
-undefined === null //false
-null == "0" //false - en una comparacion no estricta cualquier que igual null es false al menos que sea undefined
-null === +"0" //  false 
-
+console.log("******** Ejercicio ********");
+5 > 4; //true
+"apple" > "pineapple"; //false
+"2" > "12"; //true -undecode
+undefined == null; //true
+undefined === null; //false
+null == "0"; //false - en una comparacion no estricta cualquier que igual null es false al menos que sea undefined
+null === +"0"; //  false
 
 /*
 TABLA CONVERSON BOOLEANO
@@ -418,7 +406,6 @@ NaN-> 0
 '  ' -> true
 */
 
-
 /*
 TABLA CONVERSON NUMEROS
 unfenined->NaN
@@ -429,7 +416,7 @@ string ''->0
 string 'hola' -> NaN
 */
 
-console.log ('************ Sentencia  IF **********')
+console.log("************ Sentencia  IF **********");
 /*SENTENCIA IF*/
 
 /*if (condicion){
@@ -441,52 +428,52 @@ console.log ('************ Sentencia  IF **********')
 */
 
 //if de linea
-if(4 > 5) console.log ('Mensaje'); 
+if (4 > 5) console.log("Mensaje");
 
-if ( 4 > 5){
-    b = 5 + 3;
-    console.log (' Mensaje');
+if (4 > 5) {
+  b = 5 + 3;
+  console.log(" Mensaje");
 }
 
-if('45a' /3){
-    console.log('No entró');
+if ("45a" / 3) {
+  console.log("No entró");
 }
 
-if('0'){
-    console.log('entró');
+if ("0") {
+  console.log("entró");
 }
 
-if('4/2'){ 
-    console.log('entró'); //Hizo una conversion Booleana de acuerdo a la tabla
+if ("4/2") {
+  console.log("entró"); //Hizo una conversion Booleana de acuerdo a la tabla
 }
 
-if(1){ 
-    console.log('entró o no entró?'); //Si entra-Hizo una conversion Booleana de acuerdo a la tabla
+if (1) {
+  console.log("entró o no entró?"); //Si entra-Hizo una conversion Booleana de acuerdo a la tabla
 }
 
 let edadx;
 
-if (edadx){
-    console.log ('Variable definida');
-}else{
-    console.log('Variable indefinida');
+if (edadx) {
+  console.log("Variable definida");
+} else {
+  console.log("Variable indefinida");
 }
 
 //Haga un algoritmo que dado retorn true si es mayor de edad
 //false si no lo es.
 
 let edad_usuario = 17;
-if (edad_usuario >= 18){
-    console.log (true);
+if (edad_usuario >= 18) {
+  console.log(true);
 } else {
-    console.log (false);
+  console.log(false);
 }
 
-console.log (edad_usuario >= 18);
+console.log(edad_usuario >= 18);
 
 //Operador ternario
 //condicion ? operacion verdadera : operacion falsa;
-resultado = edad_usuario >=18 ? x=5 : x=7;
+resultado = edad_usuario >= 18 ? (x = 5) : (x = 7);
 
 //Operadores logicos
 
@@ -498,14 +485,14 @@ f or v = v
 f or f = f
 */
 
-console.log ('*****Operador OR ********');
-console.log (true || true); //true
-console.log (true || false); //true
-console.log (false || true); //true
-console.log (false || false); //false
+console.log("*****Operador OR ********");
+console.log(true || true); //true
+console.log(true || false); //true
+console.log(false || true); //true
+console.log(false || false); //false
 
-if ( 4 == 4 || 2 > 5){
-    console.log ('Verdadero');
+if (4 == 4 || 2 > 5) {
+  console.log("Verdadero");
 }
 
 //resultado = valor_uno || valor_dos || valor_tres
@@ -515,10 +502,10 @@ if ( 4 == 4 || 2 > 5){
 //3.Si todos los operandos han sido evaluados (todos eran falsos) retorn el ultimo operando.
 
 let comparacion_booleana = true || false || true; //true
-comparacion_booleana = '0' || '0'; //'0'
-comparacion_booleana = undefined || null || NaN || ''; // ''
-comparacion_booleana = undefined || null || 3 || ''; // 3
-comparacion_booleana = undefined || 'hola' || 3 || ''; // hola
+comparacion_booleana = "0" || "0"; //'0'
+comparacion_booleana = undefined || null || NaN || ""; // ''
+comparacion_booleana = undefined || null || 3 || ""; // 3
+comparacion_booleana = undefined || "hola" || 3 || ""; // hola
 
 //Resumen: Devuelve el primer valor verdadero o el ultimo si todos son falsos.
 
@@ -541,14 +528,14 @@ f and v = f
 f and f = f
 */
 
-console.log ('*****Operador AND ********');
-console.log (true && true); //true
-console.log (true && false); //false
-console.log (false && true); //false
-console.log (false && false); //false
+console.log("*****Operador AND ********");
+console.log(true && true); //true
+console.log(true && false); //false
+console.log(false && true); //false
+console.log(false && false); //false
 
-if ( 4 == 4 && 2 > 5){
-    console.log ('Verdadero');
+if (4 == 4 && 2 > 5) {
+  console.log("Verdadero");
 }
 
 //resultado = valor_uno || valor_dos || valor_tres
@@ -558,10 +545,10 @@ if ( 4 == 4 && 2 > 5){
 //3.Si todos los operandos han sido evaluados (todos eran verdaderos) retorna el ultimo operando.
 
 let comparacion_booleana_2 = true && false && true; //false
-comparacion_booleana_2 = '0' && '0'; //'0'
-comparacion_booleana_2 = undefined && null && NaN && ''; // undefined
-comparacion_booleana_2 = undefined && null && 3 && ''; // undefined
-comparacion_booleana_2 = undefined && 'hola' && 3 && ''; // undefined
+comparacion_booleana_2 = "0" && "0"; //'0'
+comparacion_booleana_2 = undefined && null && NaN && ""; // undefined
+comparacion_booleana_2 = undefined && null && 3 && ""; // undefined
+comparacion_booleana_2 = undefined && "hola" && 3 && ""; // undefined
 
 //Resumen: Devuelve el primer valor falso o el ultimo si todos son verdaderos.
 
@@ -585,3 +572,112 @@ console.log(!!undefined); //false == Boolean(undefined)
 
 a = null ?? undefined ?? undefined ?? null ?? "hola" ?? null ?? "carlos"; //hola
 b = null ?? undefined ?? undefined ?? null ?? null ?? null ?? null; //null
+
+//BUCLES WHILE Y FOR
+/*
+While  (condicion){
+
+}
+*/
+
+let i = 0;
+while (i < 10) {
+  console.log(`El valor de i es: ${i}`);
+  i++;
+}
+
+console.log("****** While ******");
+i = 10;
+while (i) {
+  console.log(`El valor de i es: ${i}`);
+  i--;
+}
+
+//do -while
+/*
+do {
+
+}while (condicion);
+*/
+
+console.log("****** Do while******");
+i = 1;
+do {
+  console.log(`El valor de i es ${i}`);
+  i++;
+} while (i <= 10);
+
+//ciclo for
+/*
+for (comienzo; condicion; incremento){
+
+}
+*/
+console.log("****** FOR ******");
+for (i = 0; i <= 10; i++) {
+  console.log(`El valor de i es ${i}`);
+}
+
+console.log("************");
+for (i = 10; i >= 0; i--) {
+  console.log(`El valor de i es ${i}`);
+}
+
+//Alcance de la variable
+
+console.log("************");
+for (let z = 0; z <= 10; z++) {
+  console.log(`El valor de z es ${z}`);
+}
+//console.log(`El valor de w por fuera es ${w}`);
+
+console.log("************");
+let w;
+for (w = 0; w <= 10; w++) {
+  console.log(`El valor de w es ${w}`);
+}
+console.log(`El valor de w por fuera es ${w}`);
+
+//Saltado de partes
+console.log("************");
+w = 0;
+for (; w <= 10; ) {
+  console.log(`El valor de w es ${w++}`);
+}
+
+//Break y continue
+console.log("********Break e****");
+w = 0;
+while (1) {
+  console.log(`El valor de w es ${w++}`);
+  if (w == 11) break;
+}
+
+console.log("********Continue****");
+for (i = 1; i <= 10; i++) {
+  if (i % 2 != 0) continue;
+  console.log(`${i} es un numero par.`);
+}
+
+//Etiquetas para break y continue
+console.log("********Etiquetas****");
+
+for (i = 0; i <= 10; i++) {
+  for (j = 0; j <= 10; j++) {
+    console.log(`La suma de i + j es  ${i + j}`);
+    if (j == 2) break;
+  }
+  if (j == 2) break;
+}
+console.log("Salió");
+
+//Etiquetas para break y continue
+console.log("********Etiquetas _2****");
+
+principal: for (i = 0; i <= 10; i++) {
+  for (j = 0; j <= 10; j++) {
+    console.log(`La suma de i + j es  ${i + j}`);
+    if (j == 2) break principal;
+  }
+}
+console.log("Salió");
