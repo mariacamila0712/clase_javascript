@@ -681,3 +681,178 @@ principal: for (i = 0; i <= 10; i++) {
   }
 }
 console.log("Salió");
+
+//Switch
+
+/*
+switch (valor):{
+    case valor1:
+        [break];
+    default:
+        [break];
+}
+*/
+console.log("******Switch******");
+a = 2 + 2;
+switch (a) {
+  case 3:
+    console.log("El resultado es 3");
+    break;
+  case 4:
+    console.log("El resultado es 4");
+    break;
+  default:
+    console.log("Ninguno de los dos valores");
+}
+
+console.log("************");
+a = 2 + 1;
+switch (a) {
+  case 3:
+  case 4:
+    console.log("El resultado es 3");
+    console.log("El resultado es 4");
+    break;
+  default:
+    console.log("Ninguno de los dos valores");
+}
+
+//FUNCIONES
+
+/*
+function nombre ([parametros]){
+
+}
+*/
+
+function saludar() {
+  console.log("Hola Mundo");
+}
+
+saludar();
+
+//Variable local
+function saludar_nombre() {
+  let nombre_xx = "Maria"; //Variable local
+  console.log(`Hola ${nombre_xx}`);
+}
+//console.log (`Hola ${nombre_xx}`);
+
+//Variable externa
+let nombre_xx = "Carlos";
+function saludar_nombre() {
+  let nombre_xx = "Maria";
+  console.log(`Hola ${nombre_xx}`);
+}
+console.log(`Hola ${nombre_xx}`);
+
+saludar_nombre();
+
+//Parametros
+console.log("********* Parametros ******");
+function mensaje_(de, texto) {
+  console.log(`${de}: ${texto}`);
+}
+
+mensaje_("Maria", "Hola Carlos");
+mensaje_("Carlos", "Hola Maria");
+
+//Valores predeterminados
+console.log("*****************");
+function mensaje_(de, texto = "") {
+  console.log(`${de}: ${texto}`);
+}
+
+mensaje_("Maria");
+mensaje_("Carlos", "Hola Maria");
+
+function sumar(a, b) {
+  return a + b;
+}
+
+function sumar_dos(a, b) {}
+console.log(sumar(4, 5));
+console.log(sumar_dos(4, 5));
+console.log(sumar_dos() === undefined);
+
+//Haga una funcion que devuelva la sumatoria de los numeor pares del 1 al x
+
+function sumatoria_pares(x) {
+  sumatoria = 0;
+  for (i = 0; i <= x; i++) {
+    if (es_par(i)) sumatoria = sumatoria + i;
+  }
+  return sumatoria;
+}
+
+function es_par(n) {
+  return n % 2 == 0;
+}
+
+console.log(sumatoria_pares(10));
+
+//Expresion y Declaracion de una funcion
+
+//Declarar una funcion
+
+function hola(){
+    console.log ('Hola Mundo');
+};
+
+console.log(hola);
+
+let aux = hola;
+ aux();
+
+//Expresion de una funcion
+
+let hola_dos___ = function(){
+    console.log ('Hola Mundo');
+};
+
+
+//Funciones flechas
+
+let hola_dos = function (){
+    console.log ('Hola Mundo');
+}
+
+let hola_dos_flecha = () => console.log ('Hola Mundo');
+
+//********************/
+let saludar_nombre_xx = function (nombre){
+    console.log (`Hola ${nombre}!`);
+}
+
+let saludar_nombre_xx_flecha = (nombre) => console.log (`Hola ${nombre}!`);
+saludar_nombre_xx_flecha = (nombre) => console.log (`Hola ${nombre}!`);
+
+//*************************************/
+let sumar_ex = function (a,b){
+
+    return a + b;
+}
+
+let sumar_ex_flecha = (a, b) => {
+    return a +b;
+} ;
+
+//Creacion de una funcion de manera dinamica
+
+let saludo_edad = (edad > 18) ? 
+() => console.log ('Es Mayor de edad'):
+() => console.log ('Es Menor de edad');
+
+saludo_edad();
+
+// Calback
+
+function decidir (pregunta, si, no){
+    if (confirm(pregunta)) si ()
+    else no();
+}
+
+let si = () => alert('La persona dijo que si !!!');
+let no = () => alert('La persona dijo que no !!!');
+
+decidir  ('¿Estas interesado en aprender JavaScript? ', si, no);
